@@ -7,8 +7,8 @@
   /* Brand — maroon red (from logo), amber accent, deep maroon dark sections */
   --navy:       #4A1418;   /* deep maroon (dark ribbons/footer) */
   --navy-2:     #6A1E22;
-  --red:        #9E2A2F;   /* maroon red (primary, matches bōt logo) */
-  --red-deep:   #7F2025;
+  --red:        #BC2B30;   /* vibrant maroon-red (matches bōt logo) */
+  --red-deep:   #9E2226;
   --gold:       #F2B705;   /* warm amber accent (more colourful) */
 
   /* Surface + text */
@@ -146,12 +146,15 @@ section { position: relative; }
 .center .section-lead { margin-left: auto; margin-right: auto; }
 
 /* ---------- Full-bleed wavy colour ribbons (section connectors) ---------- */
-.ribbon { position: relative; background: var(--navy); color: #fff; margin: 100px 0; }
+.ribbon { position: relative; background: linear-gradient(135deg, var(--red), var(--navy)); color: #fff; margin: 100px 0; }
 .ribbon-ink { background: var(--ink); }
 .ribbon-cream { background: var(--cream); color: var(--ink); }
 .ribbon-cream h2 { color: var(--ink); }
 .ribbon-inner { position: relative; z-index: 1; padding: 88px 0; }
 .ribbon h2 { color: #fff; }
+.ribbon:not(.ribbon-cream) .btn-primary { background: var(--gold); color: #3A1410; }
+.ribbon:not(.ribbon-cream) .btn-primary::before { background: var(--red-deep); }
+.ribbon:not(.ribbon-cream) .btn-primary:hover { color: #fff; }
 .wave { position: absolute; left: 0; width: 100%; line-height: 0; z-index: 2; pointer-events: none; }
 .wave svg { display: block; width: 100%; height: 56px; }
 .wave path { fill: var(--paper); }
