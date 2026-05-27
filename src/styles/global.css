@@ -1,21 +1,21 @@
 /* ===========================================================
    BOT Industries — modern halal premix-beverage manufacturer
-   Orange · leaf green · cream — 3-in-1 OEM beverages
+   Maroon red · amber · cream — 3-in-1 OEM beverages (brand logo)
    =========================================================== */
 
 :root {
-  /* Brand — warm orange primary, deep green dark sections, lime accent */
-  --navy:       #2C4D24;   /* deep leaf green (dark ribbons/footer) */
-  --navy-2:     #3A6330;
-  --red:        #F47A2D;   /* warm orange (primary accent / CTA) */
-  --red-deep:   #D9601A;
-  --gold:       #8CDA3F;   /* lime green accent */
+  /* Brand — maroon red (from logo), amber accent, deep maroon dark sections */
+  --navy:       #4A1418;   /* deep maroon (dark ribbons/footer) */
+  --navy-2:     #6A1E22;
+  --red:        #9E2A2F;   /* maroon red (primary, matches bōt logo) */
+  --red-deep:   #7F2025;
+  --gold:       #F2B705;   /* warm amber accent (more colourful) */
 
   /* Surface + text */
-  --ink:        #2A2218;   /* warm brown-black text */
-  --ink-soft:   #6E6356;
+  --ink:        #2A1A18;   /* warm brown-black text */
+  --ink-soft:   #6E5A52;
   --paper:      #FFFBF4;   /* warm cream page background */
-  --cream:      #FCEAD0;   /* warm peach-cream alt section */
+  --cream:      #FBEAD2;   /* warm cream alt section */
   --white:      #FFFFFF;
   --line:       rgba(42, 34, 24, 0.12);
   --line-strong:rgba(42, 34, 24, 0.18);
