@@ -1,35 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const categories = [
-  {
-    name: "Coffee",
-    accent: "var(--red)",
-    items: [
-      { ph: "3-in-1 Coffee", name: "3-in-1 Coffee", desc: "Classic instant coffee, creamer and sugar in one." },
-      { ph: "White Coffee", name: "White Coffee", desc: "Smooth, creamy Ipoh-style white coffee premix." },
-      { ph: "Kopi O", name: "Kopi O", desc: "Bold black coffee premix, sugar to taste." },
-    ],
-  },
-  {
-    name: "Tea & Chocolate",
-    accent: "var(--navy)",
-    items: [
-      { ph: "Milk Tea", name: "Milk Tea", desc: "Rich, creamy 3-in-1 milk tea." },
-      { ph: "Teh Tarik", name: "Teh Tarik", desc: "Frothy Malaysian pulled-tea premix." },
-      { ph: "Chocolate Malt", name: "Chocolate Malt", desc: "Malty chocolate drink, hot or cold." },
-    ],
-  },
-  {
-    name: "Wellness & Others",
-    accent: "var(--gold)",
-    items: [
-      { ph: "Cereal Drink", name: "Cereal Drink", desc: "Wholesome multi-grain cereal beverage." },
-      { ph: "Ginger Drink", name: "Ginger Drink", desc: "Warming ginger premix." },
-      { ph: "Custom Blend", name: "Custom OEM Blend", desc: "Your recipe, formulated and packed by us." },
-    ],
-  },
-];
 ---
 
 <Layout path="/products" title="Products — Central Vista Snacks & Confectionery">
@@ -44,96 +14,206 @@ const categories = [
     </div>
   </section>
 
-  {categories.map((cat) => (
-    <section class="cat" style={`--c:${cat.accent}`}>
-      <div class="container">
-        <header class="cat-head" data-reveal>
-          <span class="cat-bar"></span>
-          <h2>{cat.name}</h2>
-          <span class="cat-count">{cat.items.length} products</span>
-        </header>
-        <div class="cat-grid" data-reveal-group>
-          {cat.items.map((it) => (
+  <section class="cat" style="--c:var(--red)">
+    <div class="container">
+      <header class="cat-head" data-reveal>
+        <span class="cat-bar"></span>
+        <h2>Coffee</h2>
+        <span class="cat-count">3 products</span>
+      </header>
+      <div class="cat-grid" data-reveal-group>
             <article class="pcard" tabindex="0">
               <div class="pcard-flip">
                 <div class="pcard-face pcard-front">
-                  <div class="pcard-media"><div class="pcard-ph"><span>{it.ph}</span></div></div>
-                  <h3>{it.name}</h3>
+                  <div class="pcard-ph">3-in-1 Coffee</div>
+                  <h3>3-in-1 Coffee</h3>
                   <span class="flip-hint">Hover for details ↻</span>
                 </div>
                 <div class="pcard-face pcard-back">
-                  <span class="back-cat">{cat.name}</span>
-                  <h3>{it.name}</h3>
-                  <p>{it.desc}</p>
+                  <span class="back-cat">Coffee</span>
+                  <h3>3-in-1 Coffee</h3>
+                  <p>Classic instant coffee, creamer and sugar in one.</p>
                   <span class="flip-hint light">↩ flip back</span>
                 </div>
               </div>
             </article>
-          ))}
-        </div>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">White Coffee</div>
+                  <h3>White Coffee</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Coffee</span>
+                  <h3>White Coffee</h3>
+                  <p>Smooth, creamy Ipoh-style white coffee premix.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Kopi O</div>
+                  <h3>Kopi O</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Coffee</span>
+                  <h3>Kopi O</h3>
+                  <p>Bold black coffee premix, sugar to taste.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
       </div>
-    </section>
-  ))}
+    </div>
+  </section>
+
+  <section class="cat" style="--c:var(--navy)">
+    <div class="container">
+      <header class="cat-head" data-reveal>
+        <span class="cat-bar"></span>
+        <h2>Tea & Chocolate</h2>
+        <span class="cat-count">3 products</span>
+      </header>
+      <div class="cat-grid" data-reveal-group>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Milk Tea</div>
+                  <h3>Milk Tea</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Tea & Chocolate</span>
+                  <h3>Milk Tea</h3>
+                  <p>Rich, creamy 3-in-1 milk tea.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Teh Tarik</div>
+                  <h3>Teh Tarik</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Tea & Chocolate</span>
+                  <h3>Teh Tarik</h3>
+                  <p>Frothy Malaysian pulled-tea premix.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Chocolate Malt</div>
+                  <h3>Chocolate Malt</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Tea & Chocolate</span>
+                  <h3>Chocolate Malt</h3>
+                  <p>Malty chocolate drink, hot or cold.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cat" style="--c:var(--gold)">
+    <div class="container">
+      <header class="cat-head" data-reveal>
+        <span class="cat-bar"></span>
+        <h2>Wellness & Others</h2>
+        <span class="cat-count">3 products</span>
+      </header>
+      <div class="cat-grid" data-reveal-group>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Cereal Drink</div>
+                  <h3>Cereal Drink</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Wellness & Others</span>
+                  <h3>Cereal Drink</h3>
+                  <p>Wholesome multi-grain cereal beverage.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Ginger Drink</div>
+                  <h3>Ginger Drink</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Wellness & Others</span>
+                  <h3>Ginger Drink</h3>
+                  <p>Warming ginger premix.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+            <article class="pcard" tabindex="0">
+              <div class="pcard-flip">
+                <div class="pcard-face pcard-front">
+                  <div class="pcard-ph">Custom Blend</div>
+                  <h3>Custom OEM Blend</h3>
+                  <span class="flip-hint">Hover for details ↻</span>
+                </div>
+                <div class="pcard-face pcard-back">
+                  <span class="back-cat">Wellness & Others</span>
+                  <h3>Custom OEM Blend</h3>
+                  <p>Your recipe, formulated and packed by us.</p>
+                  <span class="flip-hint light">↩ flip back</span>
+                </div>
+              </div>
+            </article>
+      </div>
+    </div>
+  </section>
+
 </Layout>
 
 <style>
-  .page-hero { padding: 64px 0 50px; }
+  .page-hero { padding: 140px 0 50px; }
   .page-title { font-size: clamp(2.6rem, 6vw, 4.2rem); margin: 18px 0 18px; letter-spacing: -0.04em; }
   .page-lead { font-size: 1.12rem; color: var(--ink-soft); max-width: 600px; line-height: 1.65; }
-
   .cat { padding: 50px 0 0; }
+  .cat:last-of-type { padding-bottom: 100px; }
   .cat-head { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
   .cat-bar { width: 32px; height: 6px; border-radius: 6px; background: var(--c); }
   .cat-head h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); letter-spacing: -0.03em; }
   .cat-count { margin-left: auto; font-size: .82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
-
   .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 34px; }
-  /* Flip card — front shows the product, back reveals the description */
   .pcard { perspective: 1300px; outline: none; cursor: pointer; }
-  .pcard-flip {
-    position: relative; width: 100%; height: 360px;
-    transform-style: preserve-3d;
-    transition: transform .7s cubic-bezier(.2,.8,.25,1);
-  }
-  .pcard:hover .pcard-flip,
-  .pcard:focus-within .pcard-flip { transform: rotateY(180deg); }
-  .pcard-face {
-    position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden;
-    border-radius: 26px; overflow: hidden; display: flex; flex-direction: column;
-  }
+  .pcard-flip { position: relative; width: 100%; height: 360px; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.8,.25,1); }
+  .pcard:hover .pcard-flip, .pcard:focus-within .pcard-flip { transform: rotateY(180deg); }
+  .pcard-face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 26px; overflow: hidden; display: flex; flex-direction: column; }
   .pcard-front { background: var(--white, #fff); border: 1px solid var(--line); padding: 18px; box-shadow: var(--shadow-sm); }
-  .pcard-front .pcard-media { flex: 1; min-height: 0; background: var(--cream); border-radius: 18px; overflow: hidden; }
+  .pcard-front .pcard-media { flex: 1; background: var(--cream); border-radius: 18px; overflow: hidden; }
   .pcard-front .pcard-media img { width: 100%; height: 100%; object-fit: contain; padding: 16px; }
-  .pcard-ph { width: 100%; height: 100%; display: grid; place-items: center; text-align: center; padding: 18px;
-    background: linear-gradient(135deg, var(--red), var(--navy)); }
-  .pcard-ph span { color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; opacity: .95; }
   .pcard-front h3 { font-size: 1.05rem; letter-spacing: -0.02em; margin-top: 14px; }
+  .pcard-ph { flex: 1; display: grid; place-items: center; text-align: center; padding: 18px; background: var(--cream); border-radius: 18px; color: var(--ink-soft); font-weight: 600; }
   .flip-hint { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); margin-top: 6px; }
   .flip-hint.light { color: rgba(255,255,255,.7); margin-top: 14px; }
-  .pcard-back {
-    background: var(--navy); color: #fff; transform: rotateY(180deg);
-    border-top: 4px solid var(--c); padding: 30px 26px; justify-content: center;
-  }
+  .pcard-back { background: var(--navy); color: #fff; transform: rotateY(180deg); border-top: 4px solid var(--c); padding: 32px 28px; justify-content: center; }
   .back-cat { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--c); margin-bottom: 12px; }
-  .pcard-back h3 { color: #fff; font-size: 1.4rem; letter-spacing: -0.02em; margin: 0 0 12px; }
+  .pcard-back h3 { color: #fff; font-size: 1.45rem; letter-spacing: -0.02em; margin-bottom: 12px; }
   .pcard-back p { color: rgba(255,255,255,.84); font-size: 1rem; line-height: 1.55; }
   @media (prefers-reduced-motion: reduce) { .pcard-flip { transition: none; } }
-
-  .oem-box {
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 36px; flex-wrap: wrap;
-  }
-  .oem-box h2 { color: #fff; font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 12px; }
-  .oem-box p { color: rgba(255,255,255,.8); max-width: 480px; }
-  .oem-box .btn { flex-shrink: 0; }
-
   @media (max-width: 900px) { .cat-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) {
-    .cat-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
-    .oem-box { padding: 40px 30px; }
-  }
-
-  /* wisechip-prodhead-pad */
-  .page-hero { padding-top: 140px; }
-
+  @media (max-width: 560px) { .cat-grid { grid-template-columns: 1fr 1fr; gap: 14px; } }
 </style>
